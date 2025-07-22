@@ -2,12 +2,12 @@
 #include <iostream>
 #include <string>
 #include <cstdio>
-#include "level_1.h"
+#include "level_2.h"
 
 using namespace std;
 
-const int ROWS = 7;
-const int COLS = 7;
+const int ROWS = 5;
+const int COLS = 5;
 const int CELL_SIZE = 80;
 const int RADIUS = 20;
 
@@ -36,7 +36,7 @@ void drawBoard() {
     sprintf(scoreText2, "%s : %d", player2.c_str(), score2);
     outtextxy(400, 20, scoreText2);
 
-    
+    // Draw 7x7 grid
     for (int row = 0; row < ROWS; row++) {
         for (int col = 0; col < COLS; col++) {
             int x = 100 + col * CELL_SIZE;
@@ -103,26 +103,9 @@ bool dropPiece(int col, int player) {
     return false; 
 }
 
-void drawbutton(){
-//	setcolor(BLUE);
-//	setfillstyle(SOLID_FILL, CYAN);
-//	bar(200,750,400,20);
-//	rectangle(200,750,400,20);
-//	
-//	setcolor(BLACK);
-//	setbkcolor(CYAN);
-//	settextstyle(DEFAULT_FONT,HORIZ_DIR,1);
-//	
-//	outtextxy(210,760,"Reset");
-}
-
-void level01() {
+void level02() {
     initwindow(800, 700, "Connect 4 - Level 1");
     
-    setbkcolor(BLACK);  
-    cleardevice();
-    
-    drawbutton();
 
     drawBoard();
 
